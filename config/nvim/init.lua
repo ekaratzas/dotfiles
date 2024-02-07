@@ -14,4 +14,4 @@ vim.api.nvim_command([[
 require("lsp")
 require("colors")
 
-vim.cmd('source ~/.config/nvim/compat.vim')
+vim.cmd.source(vim.fn.stdpath("config") .. "/compat.vim")

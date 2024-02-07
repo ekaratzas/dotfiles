@@ -46,22 +46,23 @@ syntax on
 let syntax_cmd="enable"
 
 set laststatus=2
-:highlight LineNr ctermfg=darkgrey
 set number
 set relativenumber
 command Nonumbers set nonumber norelativenumber
 set title
+
 " check :highlight in vim to see what's what
-hi Visual ctermfg=Yellow ctermbg=NONE cterm=bold,underline
-hi Search cterm=bold,underline ctermfg=grey ctermbg=NONE
-hi Constant ctermfg=red
-hi Statement ctermfg=yellow
-hi Delimeter ctermfg=yellow
-hi Special ctermfg=red
-hi NonText ctermfg=red
-set guicursor+=a:ver1
+":highlight LineNr ctermfg=darkgrey
+"hi Visual ctermfg=Yellow ctermbg=NONE cterm=bold,underline
+"hi Search cterm=bold,underline ctermfg=grey ctermbg=NONE
+"hi Constant ctermfg=red
+"hi Statement ctermfg=yellow
+"hi Delimeter ctermfg=yellow
+"hi Special ctermfg=red
+"hi NonText ctermfg=red
+"set guicursor+=a:ver1
 " work pc doesnt like background dark
-set background=light
+"set background=light
 
 " The Silver Searcher
 if executable('ag')

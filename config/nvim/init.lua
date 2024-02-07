@@ -1,3 +1,4 @@
+-- vim plug is best plug
 vim.api.nvim_command([[
     call plug#begin('~/.local/share/nvim/plugged')
         Plug 'williamboman/mason.nvim'
@@ -6,10 +7,12 @@ vim.api.nvim_command([[
         Plug 'junegunn/fzf.vim'
         Plug 'itchyny/lightline.vim'
         Plug 'bfrg/vim-cpp-modern'
+        Plug 'catppuccin/nvim'
     call plug#end()
 ]])
 
 require("lsp")
+require("colors")
 
 -- annoying diagnostics are annoying
 vim.diagnostic.disable()

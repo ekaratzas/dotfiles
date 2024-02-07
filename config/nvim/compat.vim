@@ -115,3 +115,6 @@ set ttimeoutlen=50
 
 " remove scratch buffer when using auto-complete
 set completeopt-=preview
+" required on some machines to get clipboard registers to work, use alongside
+" xsel package
+set clipboard+=unnamed

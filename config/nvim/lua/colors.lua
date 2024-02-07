@@ -90,3 +90,6 @@ vim.cmd("autocmd VimEnter * lua SetRandomLineNrColor()")
 -- Setting highlights for lines above and below
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#6e738d", bold = false })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#6e738d", bold = false })
+
+-- not sure if it belongs here but whatever
+require("ibl").setup()

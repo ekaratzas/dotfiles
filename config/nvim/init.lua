@@ -8,6 +8,7 @@ vim.api.nvim_command([[
         Plug 'itchyny/lightline.vim'
         Plug 'bfrg/vim-cpp-modern'
         Plug 'catppuccin/nvim'
+        Plug 'lukas-reineke/indent-blankline.nvim'
     call plug#end()
 ]])
 

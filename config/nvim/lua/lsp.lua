@@ -1,4 +1,6 @@
--- install clangd or whatever using :MasonInstall
+-- :MasonInstall clangd
+-- Note: c# required .net 8.0 sdk
+-- :MasonInstall csharp-language-server
 require("mason").setup()
 
 -- Mappings.
@@ -39,3 +41,16 @@ require'lspconfig'.clangd.setup {
         compilationDatabasePath = "~/"
     }
 }
+
+require'lspconfig'.csharp_ls.setup {
+    on_attach = on_attach1,
+    init_options = {
+        AutomaticWorkspaceInit = true
+    },
+    root_dir = function(fname)
+        return "~/"
+    end,
+}
+
+-- :-D
+vim.diagnostic.disable()

@@ -14,7 +14,4 @@ vim.api.nvim_command([[
 require("lsp")
 require("colors")
 
--- annoying diagnostics are annoying
-vim.diagnostic.disable()
-
 vim.cmd('source ~/.config/nvim/compat.vim')

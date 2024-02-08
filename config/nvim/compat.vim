@@ -81,10 +81,6 @@ let asmsyntax="nasm"
 " remove scratch buffer when using auto-complete
 set completeopt-=preview
 
-" required on some machines to get clipboard registers to work, use alongside
-" xsel package
-set clipboard+=unnamed
-
 " use this alongside-> export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g \"\"'
 " in .bashrc. File fuzzy finder will search from the git root if we're in a git repo
 function! FZFProjectRoot()
@@ -123,4 +119,23 @@ if executable('ag')
   " bind \ (backward slash) to grep shortcut
    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
    nnoremap \ :Ag<SPACE>
+endif
+
+" make clipboard copy/paste work
+" replacing set clipboard+=unnamed with the following seems to improve startup
+" time for initial session in wsl. might also wanna just replace xsel with
+" clip and be done with it.
+if executable('xsel')
+    let g:clipboard = {
+            \ "name": "xsel - bin",
+            \ "copy": {
+            \   '+': '/usr/bin/xsel -i -b',
+            \   '*': '/usr/bin/xsel -i -p',
+            \   },
+            \ "paste": {
+            \   '+': '/usr/bin/xsel -b',
+            \   '*': '/usr/bin/xsel -p',
+            \   },
+            \ 'cache_enabled': 0,
+        \ }
 endif

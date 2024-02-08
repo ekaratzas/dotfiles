@@ -46,6 +46,7 @@ set laststatus=2
 set number
 set relativenumber
 set title
+set scrolloff=10
 
 "
 " vim-cpp-modern plugin stuff

@@ -23,16 +23,22 @@ endfunction
 "
 " remaps
 "
+" buffers
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-h> :bp<CR>
 :nnoremap <C-n> :noh<CR>
+" jump around
 :nnoremap <C-d> <C-d>zz
 :nnoremap <C-u> <C-u>zz
 :nnoremap n nzz
 :nnoremap N Nzz
 :nnoremap <C-w> <C-w>w
 let mapleader = " "
+" explore
 map <leader>pv :Ex<CR>
+" clipboard
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
 
 "
 " search options

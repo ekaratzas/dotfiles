@@ -1,0 +1,8 @@
+export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g ""'
+export EDITOR=nvim
+
+alias ranger='source ranger'
+alias ls='ls -lFh'
+alias mountwindows='sudo mount /dev/sda4 /mnt'
+# lets try dis
+alias vim=nvim

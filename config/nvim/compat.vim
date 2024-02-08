@@ -31,6 +31,8 @@ endfunction
 :nnoremap n nzz
 :nnoremap N Nzz
 :nnoremap <C-w> <C-w>w
+let mapleader = " "
+map <leader>pv :Ex<CR>
 
 "
 " search options

@@ -13,6 +13,8 @@ function FixmcppFunc()
     :%s/String/string/g
 endfunction
 
+let mapleader = " "
+
 "
 " custom commands
 "
@@ -26,14 +28,16 @@ endfunction
 " buffers
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-h> :bp<CR>
-:nnoremap <C-n> :noh<CR>
+" nnoremap <leader>b :buffer<space>
+" nnoremap <leader>b :ls<cr>:b<space>
+:nnoremap <leader>b :Buffers<CR>
 " jump around
 :nnoremap <C-d> <C-d>zz
 :nnoremap <C-u> <C-u>zz
 :nnoremap n nzz
 :nnoremap N Nzz
+:nnoremap <C-n> :noh<CR>
 :nnoremap <C-w> <C-w>w
-let mapleader = " "
 " explore
 map <leader>pv :Ex<CR>
 " clipboard

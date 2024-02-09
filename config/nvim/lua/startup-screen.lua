@@ -23,5 +23,6 @@ require("dashboard").setup({
 
 -- execute dashboard if no more active buffers
 -- Note: this seems to cause an exception in dashboard's hyper.lua when trying to open a file in read-only
--- mode because another instance of nvim already has it open
-vim.cmd [[ au BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) && winnr('$') == 1 | exec 'Dashboard' | endif ]]
+-- mode because another instance of nvim already has it open.
+-- Additionally, it seems to clash violently with barbar plugin, turning it off for now.
+-- vim.cmd [[ au BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) && winnr('$') == 1 | exec 'Dashboard' | endif ]]

@@ -11,6 +11,7 @@ vim.api.nvim_command([[
         Plug 'lukas-reineke/indent-blankline.nvim'
         Plug 'nvim-tree/nvim-web-devicons'
         Plug 'nvimdev/dashboard-nvim'
+        Plug 'romgrk/barbar.nvim'
     call plug#end()
 ]])
 

@@ -95,3 +95,7 @@ vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#6e738d", bold = false })
 require("ibl").setup({
     exclude = { filetypes = { "alpha", "dashboard" } },
 })
+
+require'barbar'.setup({
+    animation = false,
+})

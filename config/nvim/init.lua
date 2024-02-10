@@ -12,6 +12,7 @@ vim.api.nvim_command([[
         Plug 'nvim-tree/nvim-web-devicons'
         Plug 'nvimdev/dashboard-nvim'
         Plug 'romgrk/barbar.nvim'
+        Plug 'kana/vim-smartword'
     call plug#end()
 ]])
 

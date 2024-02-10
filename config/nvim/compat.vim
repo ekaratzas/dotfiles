@@ -37,6 +37,10 @@ let mapleader = " "
 :nnoremap n nzz
 :nnoremap N Nzz
 :nnoremap <C-n> :noh<CR>
+map w  <Plug>(smartword-w)
+map b  <Plug>(smartword-b)
+map e  <Plug>(smartword-e)
+map ge  <Plug>(smartword-ge)
 :nnoremap <C-w> <C-w>w
 " explore
 map <leader>pv :Ex<CR>

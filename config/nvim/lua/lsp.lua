@@ -36,7 +36,7 @@ local on_attach1 = function(client, bufnr)
 end
 
 require'lspconfig'.clangd.setup {
-    cmd = { 'clangd', '--background-index', '--completion-style=detailed' },
+    cmd = { 'clangd', '--background-index', '--j=4' },
     on_attach = on_attach1,
     init_options = {
         compilationDatabasePath = "~/"

@@ -21,7 +21,7 @@ vim.api.nvim_command([[
 ]])
 
 require("lsp")
-require("colors")
+require("cosmetics")
 require("startup-screen")
 
 vim.cmd.source(vim.fn.stdpath("config") .. "/compat.vim")

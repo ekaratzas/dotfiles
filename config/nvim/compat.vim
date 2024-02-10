@@ -21,6 +21,7 @@ let mapleader = " "
 :command Fixmcpp call FixmcppFunc()
 :command Whitespace :%s/\s\+$//g
 :command Nonumbers set nonumber norelativenumber
+:command Maximize :tabedit %
 
 "
 " remaps

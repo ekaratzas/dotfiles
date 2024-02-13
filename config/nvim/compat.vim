@@ -39,6 +39,10 @@ let mapleader = " "
 :nnoremap n nzz
 :nnoremap N Nzz
 :nnoremap <C-n> :noh<CR>
+:nnoremap W w
+:nnoremap B b
+:vnoremap W w
+:vnoremap B b
 map w  <Plug>(smartword-w)
 map b  <Plug>(smartword-b)
 map e  <Plug>(smartword-e)
@@ -49,6 +53,8 @@ map <leader>pv :Ex<CR>
 " clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
+" turn off recording
+map q <Nop>
 
 "
 " search options

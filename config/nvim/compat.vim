@@ -55,6 +55,10 @@ vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 " turn off recording
 map q <Nop>
+" git stuff
+map <F3> :!git blame % > /tmp/git.blame<CR>:vsplit /tmp/git.blame<CR>
+map <F4> :!git log --abbrev-commit % > /tmp/git.log<CR>:vsplit /tmp/git.log<CR>
+map <F5> :!git add %;git commit -m "commit" %<CR>
 
 "
 " search options

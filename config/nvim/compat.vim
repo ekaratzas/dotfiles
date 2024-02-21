@@ -60,6 +60,8 @@ nnoremap <F3> :let bn = expand('%') <bar> execute 'tabnew' <bar> execute 'r !git
 nnoremap <F4> :let bn = expand('%') <bar> execute 'tabnew' <bar> execute 'r !git log ' . shellescape(bn)<CR>
 "map <F3> :!git blame % > /tmp/git.blame<CR>:vsplit /tmp/git.blame<CR>
 "map <F4> :!git log --abbrev-commit % > /tmp/git.log<CR>:vsplit /tmp/git.log<CR>
+" reload all files from disk
+nnoremap <F5> :bufdo e!
 
 "
 " search options

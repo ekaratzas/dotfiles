@@ -56,9 +56,10 @@ nnoremap <leader>y "+y
 " turn off recording
 map q <Nop>
 " git stuff
-map <F3> :!git blame % > /tmp/git.blame<CR>:vsplit /tmp/git.blame<CR>
-map <F4> :!git log --abbrev-commit % > /tmp/git.log<CR>:vsplit /tmp/git.log<CR>
-map <F5> :!git add %;git commit -m "commit" %<CR>
+nnoremap <F3> :let bn = expand('%') <bar> execute 'tabnew' <bar> execute 'r !git blame ' . shellescape(bn)<CR>
+nnoremap <F4> :let bn = expand('%') <bar> execute 'tabnew' <bar> execute 'r !git log ' . shellescape(bn)<CR>
+"map <F3> :!git blame % > /tmp/git.blame<CR>:vsplit /tmp/git.blame<CR>
+"map <F4> :!git log --abbrev-commit % > /tmp/git.log<CR>:vsplit /tmp/git.log<CR>
 
 "
 " search options

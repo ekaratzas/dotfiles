@@ -1,3 +1,5 @@
+require("persistence").setup()
+
 require("dashboard").setup({
     theme = "hyper",
     config = {
@@ -11,6 +13,13 @@ require("dashboard").setup({
         project = { enable = false },
         shortcut = {
             { desc = '-- gpf @ ' .. vim.fn.hostname() .. ' --', group = 'DashboardShortCut' },
+            {
+                icon = ' ',
+                desc = 'restore last session',
+                group = 'DiagnosticHint',
+                action = 'lua require("persistence").load({ last = true })',
+                key = 'r',
+            },
         },
 
     },

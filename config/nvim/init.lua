@@ -12,6 +12,7 @@ vim.api.nvim_command([[
         Plug 'nvimdev/dashboard-nvim'
         Plug 'romgrk/barbar.nvim'
         Plug 'kana/vim-smartword'
+        Plug 'folke/persistence.nvim'
         Plug 'catppuccin/nvim'
         Plug 'neanias/everforest-nvim'
         Plug 'rebelot/kanagawa.nvim'

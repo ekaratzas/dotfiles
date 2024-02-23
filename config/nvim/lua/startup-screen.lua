@@ -12,7 +12,7 @@ require("dashboard").setup({
         packages = { enable = false },
         project = { enable = false },
         shortcut = {
-            { desc = '-- gpf @ ' .. vim.fn.hostname() .. ' --', group = 'DashboardShortCut' },
+            { desc = 'gpf @ ' .. vim.fn.hostname(), group = 'DashboardShortCut' },
             {
                 icon = ' ',
                 desc = 'restore last session',

@@ -1,0 +1,12 @@
+[Scheme]
+Name=OneHalfDark
+ColorCursor=#f2f2d5d5cfcf
+ColorBackground=#282C34
+ColorCursorForeground=#232634
+ColorCursorUseDefault=FALSE
+ColorSelection=#c6c6d0d0f5f5
+ColorSelectionBackground=#626880
+ColorSelectionUseDefault=FALSE
+ColorPalette=rgb(90,99,116);rgb(224,108,117);rgb(152,195,121);rgb(229,192,123);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(220,223,228);rgb(40,44,52);rgb(224,108,117);rgb(152,195,121);rgb(229,192,123);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(220,223,228)
+TabActivityColor=#EF9F76
+

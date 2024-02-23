@@ -30,6 +30,7 @@ let mapleader = " "
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-h> :bp<CR>
 :nnoremap <leader>q :bw<Enter>
+:nnoremap <leader>w :bw!<Enter>
 " nnoremap <leader>b :buffer<space>
 " nnoremap <leader>b :ls<cr>:b<space>
 :nnoremap <leader>b :Buffers<CR>

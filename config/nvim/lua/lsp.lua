@@ -35,11 +35,17 @@ local on_attach1 = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>s', '<cmd>lua vim.lsp.buf.workspace_symbol(vim.fn.input("Search for symbol: "))<CR>', opts)
 end
 
+-- get builddir override from environmental variable
+local builddir = os.getenv("BUILDDIR")
+if not builddir or builddir == "" then
+    builddir = "~/"
+end
+
 require'lspconfig'.clangd.setup {
     cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
     on_attach = on_attach1,
     init_options = {
-        compilationDatabasePath = "~/"
+        compilationDatabasePath = builddir
     }
 }
 
@@ -49,7 +55,7 @@ require'lspconfig'.csharp_ls.setup {
         AutomaticWorkspaceInit = true
     },
     root_dir = function(fname)
-        return "~/"
+        return builddir
     end,
 }
 

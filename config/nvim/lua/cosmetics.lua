@@ -5,7 +5,12 @@ require("colorschemes.onenord")
 require("colorschemes.rose-pine")
 
 --vim.o.background = dark
-vim.cmd.colorscheme "catppuccin"
+-- get colorscheme override from environmental variable
+local colorscheme = os.getenv("COLORSCHEME")
+if not colorscheme or colorscheme == "" then
+    colorscheme = "catppuccin"
+end
+vim.cmd("colorscheme " .. colorscheme)
 
 vim.g.lightline = {
     colorscheme = 'catppuccin'

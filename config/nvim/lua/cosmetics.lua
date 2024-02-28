@@ -49,4 +49,7 @@ require("ibl").setup({
 
 require'barbar'.setup({
     animation = false,
+    icons = {
+        buffer_number = true,
+    },
 })

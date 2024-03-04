@@ -1,0 +1,13 @@
+sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libfreetype6-dev build-essential
+
+$ mkdir build && cd build
+$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DTILES=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBACKTRACE=ON
+$ make -j4
+
+SOUND=1
+
+astyle --options=./.astylerc src/activity_item_handling.cpp
+
+https://docs.cataclysmbn.org/en/contribute/contributing/
+
+

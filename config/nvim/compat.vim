@@ -69,7 +69,7 @@ nnoremap <F5> :bufdo e!
 "
 set ignorecase
 set smartcase
-set hlsearch
+set nohlsearch
 
 "
 " line numbers and such

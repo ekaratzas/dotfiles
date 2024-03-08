@@ -34,6 +34,7 @@ let mapleader = " "
 " nnoremap <leader>b :buffer<space>
 " nnoremap <leader>b :ls<cr>:b<space>
 :nnoremap <leader>b :Buffers<CR>
+:nnoremap <F9> <C-6>
 " jump around
 :nnoremap <C-d> <C-d>zz
 :nnoremap <C-u> <C-u>zz

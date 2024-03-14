@@ -48,6 +48,8 @@ require("rose-pine").setup({
     },
 
     highlight_groups = {
+        Visual = { bg = "#59546D" },
+        --Visual = { bg = "love" },
         -- Comment = { fg = "foam" },
         -- VertSplit = { fg = "muted", bg = "muted" },
     },

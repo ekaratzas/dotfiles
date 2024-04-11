@@ -13,6 +13,16 @@ function FixmcppFunc()
     :%s/String/string/g
 endfunction
 
+" options for the days we're on windows
+if has('win32')
+    " mostly use vim on windows so set basic cosmetics here
+    set termguicolors
+    set background=dark
+    colorscheme gruvbox
+    " apparently backspace by default on vim doesnt do much
+    set backspace=indent,eol,start
+endif
+
 let mapleader = " "
 
 "

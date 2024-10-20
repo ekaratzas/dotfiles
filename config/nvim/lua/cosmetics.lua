@@ -53,3 +53,7 @@ require'barbar'.setup({
         buffer_number = true,
     },
 })
+
+-- show class/function name context at top
+vim.g.context_highlight_border = '<hide>'
+vim.g.context_enable = 1

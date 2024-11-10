@@ -74,6 +74,8 @@ nnoremap <F4> :let bn = expand('%') <bar> execute 'tabnew' <bar> execute 'r !git
 "map <F4> :!git log --abbrev-commit % > /tmp/git.log<CR>:vsplit /tmp/git.log<CR>
 " reload all files from disk
 nnoremap <F5> :bufdo e!
+" fzf
+:nnoremap <leader>s :WorkspaceSymbols<CR>
 
 "
 " search options

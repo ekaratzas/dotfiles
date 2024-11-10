@@ -32,7 +32,7 @@ local on_attach1 = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>s', '<cmd>lua vim.lsp.buf.workspace_symbol(vim.fn.input("Search for symbol: "))<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>S', '<cmd>lua vim.lsp.buf.workspace_symbol(vim.fn.input("Search for symbol: "))<CR>', opts)
 end
 
 -- get builddir override from environmental variable

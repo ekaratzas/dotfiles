@@ -127,17 +127,8 @@ set completeopt-=preview
 
 " use this alongside-> export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g \"\"'
 " in .bashrc. File fuzzy finder will search from the git root if we're in a git repo
-function! FZFProjectRoot()
-    let project_root = system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-    if strlen(project_root) > 0
-        call fzf#run(fzf#wrap('FZFProjectRoot', {'dir': project_root}))
-    else
-        call fzf#run(fzf#wrap('FZFProjectRoot'))
-    endif
-endfunction
-
 " C+P for file fuzzy finder
-map <C-P> :call FZFProjectRoot()<CR>
+map <C-P> :GFiles <CR>
 
 " syntax_cmd on debian* can affect the highlighting. The idea here is to use
 " whatever colorscheme the terminal emulator has instead of whatever the

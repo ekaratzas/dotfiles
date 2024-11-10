@@ -5,6 +5,8 @@ vim.api.nvim_command([[
         Plug 'neovim/nvim-lspconfig'
         Plug 'junegunn/fzf'
         Plug 'junegunn/fzf.vim'
+        Plug 'gfanto/fzf-lsp.nvim'
+        Plug 'nvim-lua/plenary.nvim'
         Plug 'itchyny/lightline.vim'
         Plug 'bfrg/vim-cpp-modern'
         Plug 'lukas-reineke/indent-blankline.nvim'

@@ -9,7 +9,6 @@ vim.api.nvim_command([[
         Plug 'nvim-lua/plenary.nvim'
         Plug 'itchyny/lightline.vim'
         Plug 'bfrg/vim-cpp-modern'
-        Plug 'lukas-reineke/indent-blankline.nvim'
         Plug 'wellle/context.vim'
         Plug 'nvim-tree/nvim-web-devicons'
         Plug 'nvimdev/dashboard-nvim'

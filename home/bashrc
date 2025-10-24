@@ -3,7 +3,8 @@ export EDITOR=nvim
 export COLORSCHEME="kanagawa"
 
 alias ranger='source ranger'
-alias ls='ls -lFh'
+alias ls='ls -lFh --color=auto'
+alias grep='grep --color=auto'
 alias mountwindows='sudo mount /dev/sda4 /mnt'
 alias mountiphone="ifuse ~/iphone"
 alias vim=nvim

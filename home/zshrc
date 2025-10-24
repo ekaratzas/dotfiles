@@ -1,0 +1,53 @@
+# ==========================
+#  Minimal Zsh Configuration
+# ==========================
+
+# --- Load colors and completion ---
+autoload -U colors && colors
+autoload -U compinit && compinit
+
+# --- Terminal setup ---
+export TERM=xterm-256color
+setopt prompt_subst
+
+# --- Prompt ---
+PROMPT="%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%}:%{$fg[yellow]%}%~%{$reset_color%}\$(git branch --show-current 2>/dev/null | sed 's/^/ (%{$fg[magenta]%}/;s/$/%{$reset_color%})/')%# "
+
+# --- Quality-of-life options ---
+setopt autocd              # 'cd' into dirs by typing name
+setopt auto_pushd          # Directory stack support
+setopt pushd_ignore_dups   # Avoid duplicate dirs in stack
+setopt interactive_comments # Allow # comments interactively
+setopt correct             # Suggest corrections for typos
+setopt extended_glob       # Powerful globbing
+setopt hist_ignore_dups    # Don’t store duplicates
+setopt share_history       # Share history between sessions
+setopt inc_append_history  # Write history immediately
+setopt hist_ignore_space   # Ignore commands starting with space
+setopt hist_reduce_blanks  # Trim blanks before saving
+
+# --- History config ---
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# --- Completion behavior ---
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# --- Handy navigation ---
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# --- Optional visual helpers ---
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# --- Load personal extras (optional) ---
+[ -f ~/dotfiles/home/bashrc ] && source ~/dotfiles/home/bashrc
+

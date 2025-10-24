@@ -8,6 +8,8 @@ alias mountwindows='sudo mount /dev/sda4 /mnt'
 alias mountiphone="ifuse ~/iphone"
 alias vim=nvim
 alias cls="clear"
+alias beepgood="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
+alias beepbad="paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga"
 
 # cata
 export BUILDDIR="/home/gpf/gamedev/Cataclysm-BN/build"
@@ -16,3 +18,27 @@ alias updateme="cd /home/gpf/gamedev/Cataclysm-BN && git checkout main && git pu
 alias srcme="cd /home/gpf/gamedev/Cataclysm-BN/src/"
 alias runme="srcme && cd .. && ./cataclysm-tiles"
 alias daggerfall="~/Downloads/daggerfall/dfu_linux_64bit-v1.1.1/DaggerfallUnity.x86_64"
+
+# put me someplace else you lazygit
+boop () {
+  local last="$?"
+  if [[ "$last" == '0' ]]; then
+      beepgood
+  else
+      beepbad
+  fi
+  $(exit "$last")
+}
+
+radio () {
+    echo $1
+    if [[ $1 == "lofi" ]]; then
+        link="https://live.hunter.fm/lofi_low"
+    elif [[ $1 == "synthwave" ]]; then
+        link="https://nightride.fm/stations?station=nightride"
+    else
+        echo "typooo"
+        exit 1
+    fi
+    mpv --really-quiet $link
+}

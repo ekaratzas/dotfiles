@@ -1,6 +1,6 @@
 export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g ""'
 export EDITOR=nvim
-export COLORSCHEME="kanagawa"
+#export COLORSCHEME="kanagawa"
 
 alias ranger='source ranger'
 alias ls='ls -lFh --color=auto'
@@ -13,11 +13,11 @@ alias beepgood="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
 alias beepbad="paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga"
 
 # cata
-export BUILDDIR="/home/gpf/gamedev/Cataclysm-BN/build"
-alias buildme="cd /home/gpf/gamedev/Cataclysm-BN/build && cmake .. -DCMAKE_BUILD_TYPE=Debug -DTILES=ON -DLUA=1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBACKTRACE=ON && make -j4"
-alias updateme="cd /home/gpf/gamedev/Cataclysm-BN && git checkout main && git pull --ff-only upstream main"
-alias srcme="cd /home/gpf/gamedev/Cataclysm-BN/src/"
-alias runme="srcme && cd .. && ./cataclysm-tiles"
+#export BUILDDIR="/home/gpf/gamedev/Cataclysm-BN/build"
+#alias buildme="cd /home/gpf/gamedev/Cataclysm-BN/build && cmake .. -DCMAKE_BUILD_TYPE=Debug -DTILES=ON -DLUA=1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBACKTRACE=ON && make -j4"
+#alias updateme="cd /home/gpf/gamedev/Cataclysm-BN && git checkout main && git pull --ff-only upstream main"
+#alias srcme="cd /home/gpf/gamedev/Cataclysm-BN/src/"
+#alias runme="srcme && cd .. && ./cataclysm-tiles"
 alias daggerfall="~/Downloads/daggerfall/dfu_linux_64bit-v1.1.1/DaggerfallUnity.x86_64"
 
 # put me someplace else you lazygit

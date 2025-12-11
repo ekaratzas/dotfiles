@@ -41,23 +41,46 @@ if not builddir or builddir == "" then
     builddir = "~/"
 end
 
-require'lspconfig'.clangd.setup {
-    cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
-    on_attach = on_attach1,
-    init_options = {
-        compilationDatabasePath = builddir
+local nvim_version = vim.version()
+if nvim_version.major == 0  and nvim_version.minor <= 9 then
+    require'lspconfig'.clangd.setup {
+        cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
+        on_attach = on_attach1,
+        init_options = {
+            compilationDatabasePath = builddir
+        }
     }
-}
 
-require'lspconfig'.csharp_ls.setup {
-    on_attach = on_attach1,
-    init_options = {
-        AutomaticWorkspaceInit = true
-    },
-    root_dir = function(fname)
-        return builddir
-    end,
-}
+    require'lspconfig'.csharp_ls.setup {
+        on_attach = on_attach1,
+        init_options = {
+            AutomaticWorkspaceInit = true
+        },
+        root_dir = function(fname)
+            return builddir
+        end,
+    }
 
--- :-D
-vim.diagnostic.disable()
+    -- :-D
+    vim.diagnostic.disable()
+else
+    vim.lsp.config.clangd = {
+        cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
+        root_markers = { '.git', 'compile_commands.json' },
+        filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
+        init_options = {
+            compilationDatabasePath = builddir
+        }
+    }
+    vim.lsp.enable('clangd')
+
+    vim.api.nvim_create_autocmd('LspAttach', {
+        pattern = { '*c', '*.cpp', '*.h', '*.hpp' },
+        callback = function(args)
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if client and client.name == 'clangd' then
+                on_attach1(client, args.buf)
+            end
+        end,
+    })
+end

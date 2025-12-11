@@ -1,7 +1,6 @@
 require("colorschemes.catppuccin")
 require("colorschemes.everforest")
 require("colorschemes.kanagawa")
-require("colorschemes.onenord")
 require("colorschemes.rose-pine")
 
 --vim.o.background = dark

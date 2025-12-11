@@ -18,7 +18,6 @@ vim.api.nvim_command([[
         Plug 'catppuccin/nvim'
         Plug 'neanias/everforest-nvim'
         Plug 'rebelot/kanagawa.nvim'
-        Plug 'rmehri01/onenord.nvim'
         Plug 'rose-pine/neovim'
         Plug 'morhetz/gruvbox'
     call plug#end()

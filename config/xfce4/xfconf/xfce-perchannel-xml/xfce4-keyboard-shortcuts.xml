@@ -64,6 +64,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="mousepad"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="&lt;Super&gt;w" type="string" value="/usr/bin/xfce4-popup-whiskermenu"/>
+      <property name="&lt;Super&gt;Tab" type="string" value="rofi -show window"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -174,7 +175,6 @@
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="lower_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_1" type="string" value="move_window_workspace_1_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_2" type="string" value="move_window_workspace_2_key"/>
-      <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
       <property name="&lt;Control&gt;F5" type="string" value="workspace_5_key"/>
       <property name="Right" type="string" value="right_key"/>
       <property name="Left" type="string" value="left_key"/>

@@ -2,7 +2,7 @@
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.950000
 FontName=ComicShannsMono Nerd Font Mono Bold 12
-MiscAlwaysShowTabs=FALSE
+MiscAlwaysShowTabs=TRUE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=TRUE

@@ -25,6 +25,7 @@ setopt share_history       # Share history between sessions
 setopt inc_append_history  # Write history immediately
 setopt hist_ignore_space   # Ignore commands starting with space
 setopt hist_reduce_blanks  # Trim blanks before saving
+setopt glob_dots            # dotfiles are part of *
 
 # --- History config ---
 HISTFILE=~/.zsh_history

@@ -11,7 +11,7 @@ alias vim=nvim
 alias cls="clear"
 alias beepgood="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
 alias beepbad="paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga"
-alias ducks="du -sh * | sort -hr | head -n 10"
+alias ducks="du -sh .[^.]* * | sort -hr | head -n 10"
 
 # cata
 #export BUILDDIR="/home/gpf/gamedev/Cataclysm-BN/build"

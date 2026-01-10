@@ -58,3 +58,4 @@ fi
 
 # --- Load personal extras (optional) ---
 [ -f ~/dotfiles/home/bashrc ] && source ~/dotfiles/home/bashrc
+[ -f ~/ephemeral ] && source ~/ephemeral

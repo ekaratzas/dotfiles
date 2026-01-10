@@ -44,3 +44,19 @@ radio () {
     fi
     mpv --really-quiet $link
 }
+
+cdf () {
+    local target=$1
+    file=`find . -iname ${target} 2> /dev/null | head -n 1`
+
+    if [ -z $file ]; then
+        return
+    fi
+
+    if [ -f $file ]; then
+        parentdir="$(dirname -- $file)"
+        cd $parentdir
+    elif [ -d $file ]; then
+        cd $file
+    fi
+}

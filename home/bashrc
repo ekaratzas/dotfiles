@@ -21,6 +21,10 @@ alias ducks="du -sh * | sort -hr | head -n 10"
 #alias runme="srcme && cd .. && ./cataclysm-tiles"
 alias daggerfall="~/Downloads/daggerfall/dfu_linux_64bit-v1.1.1/DaggerfallUnity.x86_64"
 
+if command -v batcat &> /dev/null; then
+    alias cat="batcat -pp --theme Coldark-Dark"
+fi
+
 # put me someplace else you lazygit
 boop () {
   local last="$?"

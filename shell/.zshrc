@@ -58,5 +58,5 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 # --- Load personal extras (optional) ---
-[ -f ~/dotfiles/home/bashrc ] && source ~/dotfiles/home/bashrc
+[ -f ~/.bashrc ] && source ~/.bashrc
 [ -f ~/ephemeral ] && source ~/ephemeral

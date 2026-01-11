@@ -40,24 +40,22 @@
       <property name="menu-height" type="int" value="501"/>
       <property name="favorites" type="array">
         <value type="string" value="firefox.desktop"/>
-        <value type="string" value="thunderbird.desktop"/>
+        <value type="string" value="thunar.desktop"/>
         <value type="string" value="pix.desktop"/>
         <value type="string" value="org.gnome.Calculator.desktop"/>
         <value type="string" value="xed.desktop"/>
-        <value type="string" value="mintinstall.desktop"/>
         <value type="string" value="xfce4-taskmanager.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="firefox.desktop"/>
-        <value type="string" value="org.gnome.Calculator.desktop"/>
-        <value type="string" value="org.qbittorrent.qBittorrent.desktop"/>
-        <value type="string" value="steam.desktop"/>
-        <value type="string" value="libreoffice-writer.desktop"/>
-        <value type="string" value="Steam Linux Runtime 3.0 (sniper).desktop"/>
+        <value type="string" value="sticky.desktop"/>
+        <value type="string" value="thunar.desktop"/>
+        <value type="string" value="htop.desktop"/>
         <value type="string" value="lightdm-settings.desktop"/>
-        <value type="string" value="menulibre-new-launcher.desktop"/>
-        <value type="string" value="com.github.tmewett.BrogueCE.desktop"/>
-        <value type="string" value="blueman-manager.desktop"/>
+        <value type="string" value="org.xfce.Catfish.desktop"/>
+        <value type="string" value="xfce4-taskmanager.desktop"/>
+        <value type="string" value="xviewer.desktop"/>
+        <value type="string" value="pix.desktop"/>
+        <value type="string" value="org.gnome.Rhythmbox3.desktop"/>
       </property>
     </property>
     <property name="plugin-2" type="empty"/>

@@ -1,0 +1,5 @@
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+configuration {
+    kb-remove-char-forward: "Control+d";
+    kb-delete-entry: "Delete";
+}

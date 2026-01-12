@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APPS=("git" "Mousepad" "nvim" "ranger" "shell" "tmux" "xfce4")
+APPS=("git" "Mousepad" "nvim" "ranger" "shell" "tmux" "xfce4" "rofi")
 
 DOTFILES_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$DOTFILES_DIR" || exit

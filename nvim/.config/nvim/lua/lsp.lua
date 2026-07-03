@@ -44,7 +44,7 @@ end
 local nvim_version = vim.version()
 if nvim_version.major == 0  and nvim_version.minor <= 9 then
     require'lspconfig'.clangd.setup {
-        cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
+        cmd = { 'clangd', '--background-index', '-j=4', '--clang-tidy=false' },
         on_attach = on_attach1,
         init_options = {
             compilationDatabasePath = builddir
@@ -65,7 +65,7 @@ if nvim_version.major == 0  and nvim_version.minor <= 9 then
     vim.diagnostic.disable()
 else
     vim.lsp.config.clangd = {
-        cmd = { 'clangd', '--background-index', '--j=4', '--clang-tidy=false' },
+        cmd = { 'clangd', '--background-index', '-j=4', '--clang-tidy=false' },
         root_markers = { '.git', 'compile_commands.json' },
         filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
         init_options = {

@@ -12,7 +12,7 @@ end
 vim.cmd("colorscheme " .. colorscheme)
 
 vim.g.lightline = {
-    colorscheme = 'catppuccin'
+    colorscheme = 'nord'
 }
 
 -- cheers to JackDerksen/viis-lazyvim

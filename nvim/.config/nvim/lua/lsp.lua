@@ -1,6 +1,8 @@
 -- :MasonInstall clangd
 -- Note: c# required .net 8.0 sdk
 -- :MasonInstall csharp-language-server
+-- rust-analyzer comes from rustup, not mason
+-- rustup component add rust-analyzer
 require("mason").setup()
 
 -- Mappings.
@@ -31,8 +33,13 @@ local on_attach1 = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>S', '<cmd>lua vim.lsp.buf.workspace_symbol(vim.fn.input("Search for symbol: "))<CR>', opts)
+
+  if vim.lsp.inlay_hint then
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>h',
+        '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })<CR>', opts)
+  end
 end
 
 -- get builddir override from environmental variable
@@ -74,11 +81,24 @@ else
     }
     vim.lsp.enable('clangd')
 
+    vim.lsp.config.rust_analyzer = {
+        cmd = { 'rust-analyzer' },
+        root_markers = { 'Cargo.toml', 'rust-project.json', '.git' },
+        filetypes = { 'rust' },
+        settings = {
+            ['rust-analyzer'] = {
+                check = { command = 'clippy' },
+                cargo = { buildScripts = { enable = true } },
+                procMacro = { enable = true },
+            }
+        }
+    }
+    vim.lsp.enable('rust_analyzer')
+
     vim.api.nvim_create_autocmd('LspAttach', {
-        pattern = { '*c', '*.cpp', '*.h', '*.hpp' },
         callback = function(args)
             local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if client and client.name == 'clangd' then
+            if client then
                 on_attach1(client, args.buf)
             end
         end,
